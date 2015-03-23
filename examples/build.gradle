@@ -35,6 +35,18 @@ task routeGuideClient(type: JavaExec) {
     classpath = sourceSets.main.runtimeClasspath
 }
 
+task pollServer(type: JavaExec) {
+    main = "io.grpc.examples.helloworld.PollServer"
+    description = "Runs the poll server."
+    classpath = sourceSets.main.runtimeClasspath
+}
+
+task pollServerClient(type: JavaExec) {
+    main = "io.grpc.examples.helloworld.PollServiceClient"
+    description = "Runs the poll service client."
+    classpath = sourceSets.main.runtimeClasspath
+}
+
 task helloWorldServer(type: JavaExec) {
     main = "io.grpc.examples.helloworld.HelloWorldServer"
     description = "Executes the hello world server."
